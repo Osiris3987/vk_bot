@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Getter
 @Setter
-@ConfigurationProperties(prefix = "vk.api")
+@ConfigurationProperties(prefix = "vk-bot")
 public class VkProps {
 
     private Double v;
