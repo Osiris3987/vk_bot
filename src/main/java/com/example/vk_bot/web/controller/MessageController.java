@@ -1,5 +1,6 @@
 package com.example.vk_bot.web.controller;
 
+import com.example.vk_bot.service.MessageHandlerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
