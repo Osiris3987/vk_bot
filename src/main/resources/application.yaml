@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: vk-bot-just-ai
+  config:
+    import: optional:file:.env[.properties]
+server:
+  port: 8080
+
+vk-bot:
+  v: ${VK_API_BOT_VERSION}
+  secret: ${VK_API_BOT_SECRET}
+  accessToken: ${VK_API_BOT_ACCESS_TOKEN}
+  confirmation: ${VK_API_BOT_CONFIRMATION}
