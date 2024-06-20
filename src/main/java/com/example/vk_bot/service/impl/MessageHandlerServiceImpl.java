@@ -4,6 +4,7 @@ import com.example.vk_bot.config.feign.VkFeignClient;
 import com.example.vk_bot.config.props.VkProps;
 import com.example.vk_bot.domain.exception.InvalidMessageEventException;
 import com.example.vk_bot.service.MessageHandlerService;
+import com.example.vk_bot.util.validation.MessageValidator;
 import com.example.vk_bot.web.dto.event.EventRequest;
 import com.example.vk_bot.web.dto.message.MessageRequest;
 import com.example.vk_bot.web.dto.message.MessageResponse;
@@ -27,6 +28,7 @@ public class MessageHandlerServiceImpl implements MessageHandlerService {
 
     @Override
     public String handleMessage(EventRequest eventRequest) {
+        MessageValidator.checkSecretIsValid(vkProps.getSecret(), eventRequest.getSecret());
         switch (eventRequest.getType()) {
             case confirmation -> {
                 return vkProps.getConfirmation();
