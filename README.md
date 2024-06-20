@@ -1,7 +1,8 @@
 # vk_bot
 ## Task:
 As part of the task, I was made to create a bot that will quote the text sent to it.
-##Getting started:
+
+## Getting started:
 
 ### 1) Get project from repository
 git clone git@github.com:Osiris3987/vk_bot.git
