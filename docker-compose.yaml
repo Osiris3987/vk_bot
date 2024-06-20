@@ -1,0 +1,17 @@
+version: '3.0'
+
+networks:
+  vk_bot:
+    driver: bridge
+
+services:
+  app:
+    build:
+      context: .
+    container_name: vk_bot_app
+    networks:
+      - vk_bot
+    env_file:
+      - .env
+    ports:
+      - '8080:8080'
